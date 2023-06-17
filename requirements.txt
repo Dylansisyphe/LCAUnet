@@ -1,0 +1,20 @@
+numpy
+scikit-learn
+matplotlib==3.2
+tqdm==4.56.0
+opencv-python==4.5.5.64
+einops==0.6.0
+tensorboard==2.4.1
+torch==1.13.0
+torchvision==0.14.0
+scipy==1.2.1 # 数据集预处理要用
+albumentations==1.2.1 # 模型训练要用，训练时需要重新安装
+timm==0.4.5
+tensorboardX==2.5.1
+yacs==0.1.8
+Pillow==6.0.0
+# 如果要使用albumentations时报错，是因为Pillow和scipy的版本冲突，
+# 最快的解决办法是直接重新安装albumentations，这样同时会把合适的Pillow与scipy的版本安装上
+# 如果数据预处理报错AttributeError: module 'scipy.misc' has no attribute 'imread'
+# pip install scipy==1.2.1
+# 在模型运行阶段，直接pip install albumentations==1.2.1

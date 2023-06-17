@@ -1,0 +1,20 @@
+## Config file
+lr:              1e-4 # Initial learning rate
+epochs:          50 # Number of epochs to train the model
+num_classes:     1 # Number of classes in the target dataset
+batch_size_tr:   24 # Batch size for train
+batch_size_va:   1 # Batch size for validationn
+lamda_dice:      1.2
+lamda_ce:        0.4 # loss_ce's weight for l_seg   
+lamda_edge:      0.5 # loss_edge's weight for l_fusions
+lamda_boundary:  0 # loss_boundary's weight for l_fusion
+experiment_name: _42124_eva  ### #experiment_name
+saved_model:     '/home/pingyi/mqs/models/LCAUnet/save_models/_44124/interval_save_39_weights_ISIC17.model' # leave '' will use a default value
+data_path:       '/home/pingyi/mqs/datasets/medical/ISIC2017/' ### # path to dataset #'/root/autodl-tmp/datasets/ISIC2018/'
+save_interval:   5 # model weight's save interval.
+patience:        10 # number of epochs without improvement to do before finishing training early.
+save_result:     './results/' # path to save results
+progress_p:      0.5 # value between 0-1 shows the number of time we need tos report training progress in each epoch
+pretrained:      '' # load the previously trained weight or no value should either 1 or 0
+pretrained_edge: './pretrained_ckpt/edge_module_weights/operationv1/init_pidnet_60.pth' # edge pretrained modulesd './pretrained_ckpt/edge_module_weights/operationv1/init_pidnet_60.pth'
+swin_pretrained_path: './pretrained_ckpt/swin_tiny_patch4_window7_224.pth' #./pretrained_ckpt/swin_tiny_patch4_window7_224.pth
